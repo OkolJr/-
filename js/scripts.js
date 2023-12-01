@@ -78,3 +78,20 @@ function fadeIn(el, display) {
         }
     })();
 };
+var x = document.getElementById("honk");
+
+function honker() {
+    var audio = new Audio('assets/honk.mp3');
+    audio.play();
+}
+let specific = document.getElementById("hoverinator");
+var audio2 = new Audio('assets/hover.mp3');
+audio2.loop = true;
+
+specific.onmouseover = () => {
+    audio2.play();
+  }
+  specific.onmouseout = () => {
+      audio2.pause();
+      audio2.currentTime=0;
+  }
